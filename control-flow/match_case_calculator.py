@@ -1,6 +1,6 @@
 num1 = int(input("Enter the first number:"))
 num2 = int(input("Enter the second number:"))
-operation = input("Enter the operation (+, -, *, /):").strip()
+operation = input("Choose the operation (+, -, *, /):").strip()
 match operation:
     case "+":
         print('The result is ', num1 + num2)
