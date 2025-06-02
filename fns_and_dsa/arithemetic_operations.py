@@ -11,4 +11,4 @@ def perform_operation(num1, num2, operation):
             raise ValueError("Cannot divide by zero.")
         return num1 / num2
     else:
-        raise ValueError(f"Unsupported operation: {operation}")
+        raise ValueError(f"Unsupported operation type: {operation}")
