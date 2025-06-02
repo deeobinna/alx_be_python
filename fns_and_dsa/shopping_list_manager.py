@@ -11,7 +11,7 @@ def main():
     while True:
         choice = input("Enter the item to add (1-4): ")
         if choice == '1':
-            add_item = input("Enter item to add: ")
+            add_item = input("Enter the item to add: ")
             shopping_list.append(add_item)
             print(f"Added '{add_item}' to the shopping list.")
         elif choice == '2':
