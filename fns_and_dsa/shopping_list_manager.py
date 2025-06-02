@@ -9,7 +9,7 @@ def display_menu():
 def main():
     display_menu()
     while True:
-        choice = input("Choose an option (1-4): ")
+        choice = input("Enter the item to add (1-4): ")
         if choice == '1':
             add_item = input("Enter item to add: ")
             shopping_list.append(add_item)
