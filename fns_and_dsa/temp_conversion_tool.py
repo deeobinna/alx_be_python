@@ -1,21 +1,20 @@
-FAHRENHEIT_TO_CELSIUS_FACTOR = None
-CELSIUS_TO_FAHRENHEIT_FACTOR = None
+FAHRENHEIT_TO_CELSIUS_FACTOR = (5/9)
+CELSIUS_TO_FAHRENHEIT_FACTOR = (9/5)
 
-temperature_to_convert = input("Enter the temperature to convert (e.g., 100F or 37C): ")
-if temperature_to_convert[-1].upper() == 'F':
+def convert_to_celsius(fahrenheit):
+    input_value  = input('Enter temperature in Fahrenheit (0F): ')
+    if not input_value.endswith('F'):
+        raise ValueError("Input must end with 'F' for Fahrenheit")
+    else:
+        return round((float(input_value[:-1]) - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR, 2)
     
-    def convert_to_celcius(fahrenheit):
-        """Convert Fahrenheit to Celsius."""
-        global FAHRENHEIT_TO_CELSIUS_FACTOR
-        if FAHRENHEIT_TO_CELSIUS_FACTOR is None:
-            FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-        return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
-elif temperature_to_convert[-1].upper() == 'C':
-    def convert_to_fahrenheit(celsius):
-        """Convert Celsius to Fahrenheit."""
-        global CELSIUS_TO_FAHRENHEIT_FACTOR
-        if CELSIUS_TO_FAHRENHEIT_FACTOR is None:
-            CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
-        return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
-else:
-    raise ValueError("Invalid temperature format. Please use 'F' for Fahrenheit or 'C' for Celsius.")   
+
+def convert_to_fahrenheit(celsius):
+    input_value  = input('Enter temperature in Celsius (0C): ')
+    if not input_value.endswith('C'):
+        raise ValueError("Input must end with 'C' for Celsius")
+    else:
+        return round((float(input_value[:-1]) * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32, 2)
+    
+
+print(convert_to_fahrenheit('25C'))
