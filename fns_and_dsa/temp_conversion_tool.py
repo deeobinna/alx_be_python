@@ -1,5 +1,5 @@
-FAHRENHEIT_TO_CELSIUS_FACTOR = (5/9)
-CELSIUS_TO_FAHRENHEIT_FACTOR = (9/5)
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 def convert_to_celsius(fahrenheit):
     input_value  = input('Enter temperature in Fahrenheit (0F): ')
@@ -17,4 +17,3 @@ def convert_to_fahrenheit(celsius):
         return round((float(input_value[:-1]) * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32, 2)
     
 
-print(convert_to_fahrenheit('25C'))
