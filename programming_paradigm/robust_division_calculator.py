@@ -1,11 +1,11 @@
-# def safe_divide(numerator, denominator):
-#     try:
-#         result = numerator / denominator
-#         return result
-#     except ZeroDivisionError:
-#         return "Error: Division by zero is not allowed."
+def safe_divide(numerator, denominator):
+    try:
+        result = numerator / denominator
+        return result
+    except ZeroDivisionError:
+        return "Error: Division by zero is not allowed."
 
-# print(safe_divide(12,0))
+print(safe_divide(12,0))
 
 
 def convert_to_floats(numerator, denominator):
