@@ -18,8 +18,3 @@ class BankAccount:
 
     def display_balance(self):
         return f"Current Balance: {self.account_balance}"
-
-x = BankAccount(300)
-print(x.display_balance())
-print(x.withdraw(200))
-print(x.display_balance())
