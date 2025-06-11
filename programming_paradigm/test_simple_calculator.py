@@ -12,16 +12,16 @@ class test_simple_calc_test(unittest.TestCase):
         self.assertEqual(self.calc.subtract(5, 3), 8)
        
 
-    def test_multiply(self):
+    def test_multiplication(self):
         self.calc = SimpleCalculator()
         self.assertEqual(self.calc.multiply(5, 3), 8)
         
 
-    def test_divide(self):
+    def test_division(self):
         self.calc = SimpleCalculator()
         self.assertEqual(self.calc.divide(5, 3), 8)
         
 
-    def test_divide_by_zero(self):
+    def test_division_by_zero(self):
         self.calc = SimpleCalculator()
         self.assertEqual(self.calc.divide(6,0), "Error: Cannot divide by zero.")
