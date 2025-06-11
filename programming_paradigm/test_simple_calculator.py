@@ -4,8 +4,8 @@ from simple_calculator import SimpleCalculator
 class test_simple_calc_test(unittest.TestCase):
     def test_addition(self):
         self.calc = SimpleCalculator()
-        self.result = self.calc.add(5, 3)
-        self.assertEqual(self.result, 8)
+        self.assertEqual(self.calc.add(5, 3), 8)
+      
     
     def test_subtraction(self):
         self.calc = SimpleCalculator()
