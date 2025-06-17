@@ -5,12 +5,12 @@ class Shape:
 
 
 class Rectangle(Shape):
-    def __init__(self, width, length):
+    def __init__(self, length, width ):
         self.width = width
         self.height = length
   
     def area(self, width, height):
-        return f'THe area of the Rectangle is: {self.width * self.length}'
+        return f'THe area of the Rectangle is: {self.length * self.width}'
     
 class Circle(Shape):
     def __init__(self, radius):
