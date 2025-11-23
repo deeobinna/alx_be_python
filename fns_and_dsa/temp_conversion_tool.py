@@ -1,5 +1,5 @@
-FAHRENHEIT_TO_CELSIUS = (5.0 / 9.0)
-CELSIUS_TO_FAHRENHEIT = (9.0 / 5.0)
+FAHRENHEIT_TO_CELSIUS = 5/9
+CELSIUS_TO_FAHRENHEIT = 9/5
 
 def convert_to_celsius(fahrenheit):
     """Convert Fahrenheit to Celsius."""
