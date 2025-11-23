@@ -9,14 +9,14 @@ def remove_item(item):
     if item in shopping_list:
         shopping_list.remove(item)
 
-def display_list():
-    return shopping_list
+def display_menu():
+    print(shopping_list)
 
 
 #user interface
 
 while True:
-    print("\nShopping List Manager")
+    print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View Shopping List")
@@ -36,8 +36,8 @@ while True:
         
     elif choice == '3':
         print("Current Shopping List:")
-        for idx, item in enumerate(display_list(), start=1):
-            print(f"{idx}. {item}")
+        for item in shopping_list:
+            print(f"- {item}")
             
     elif choice == '4':
         print("Exiting Shopping List Manager. Goodbye!")
