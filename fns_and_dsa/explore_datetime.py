@@ -3,7 +3,7 @@
 #save the current date inside a current_date variable
 #Format and print the current date and time in a readable format, such as “YYYY-MM-DD HH:MM:SS”.```python
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 def display_current_datetime():
     # Obtain the current date and time
@@ -23,6 +23,7 @@ def display_current_datetime():
 
 
 def calculate_future_date(days):
+
     # Obtain the current date
     now = datetime.now()
     
@@ -34,3 +35,7 @@ def calculate_future_date(days):
     
     # Print the future date
     print(f"Future Date after {days} days: {formatted_future_date}")
+
+
+user_input = int(input("Enter the number of days to add to the current date: "))
+display_current_datetime()
