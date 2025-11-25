@@ -11,7 +11,7 @@ class BankAccount:
 
     def withdraw(self, amount):
         if amount >= self.account_balance:
-            print("Insufficient funds")
+            print("Insufficient funds.")
         else:
             self.account_balance -= amount
 
