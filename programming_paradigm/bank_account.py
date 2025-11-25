@@ -2,26 +2,20 @@
 #use the __init__ method to initialize an account_balance attribute
 class BankAccount:
     def __init__(self, initial_balance=0):
-        self.account_balance = float(initial_balance)
+        self.account_balance = initial_balance
 
     #Implement deposit(amount), withdraw(amount), and display_balance() methods.
     def deposit(self, amount):
         #deposit should add the specified amount to account_balance.
-        if amount > 0:
-            self.account_balance += amount
-            print(f"Deposited: ${amount:.1f}")
-        
-        else:
-            print("Deposit amount must be positive.")
+        self.account_balance += amount
+        print(f"Deposited: ${amount:.1f}")
 
 
     def withdraw(self, amount):
         if amount <= 0:
             print("Withdrawal amount must be positive.")
-           
-        elif amount > self.account_balance:
+        elif amount >= self.account_balance:
             print("Insufficient funds.")
-           
         else:
             self.account_balance -= amount
             print(f"Withdrew: ${amount:.1f}")
