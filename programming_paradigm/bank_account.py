@@ -4,19 +4,18 @@ class BankAccount:
     def __init__(self, initial_balance=0):
         self.account_balance = initial_balance
 
-    #Implement deposit(amount), withdraw(amount), and display_balance() methods.
     def deposit(self, amount):
-        #deposit should add the specified amount to account_balance.
         self.account_balance += amount
         print(f"Deposited: ${amount:.1f}")
-
+       
 
     def withdraw(self, amount):
-        if amount >= self.account_balance:
+        if amount > self.account_balance:
             print("Insufficient funds.")
-        else:
-            self.account_balance -= amount
-            print(f"Withdrew: ${amount:.1f}")
+            return False
+        self.account_balance -= amount
+        print(f"Withdrew: ${amount:.1f}")
+        return True
             
 
 
