@@ -11,11 +11,11 @@ class Test(unittest.TestCase):
         calc = SimpleCalculator()
         self.assertEqual(self.calc.subtract)
 
-    def test_multiply(self):
+    def test_multiplication(self):
         calc = SimpleCalculator()
         self.assertEqual(self.calc.multiply)
 
-    def test_divide(self):
+    def test_division(self):
         calc = SimpleCalculator()
         self.assertEqual(self.calc.divide)
     
