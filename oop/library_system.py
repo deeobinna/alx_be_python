@@ -8,12 +8,10 @@ class Book:
     
 class EBook(Book):
     def __init__(self, file_size):
-        super().__init__(self.title, self.author)
         self.file_size = file_size  # in MB
 
 class PrintBook(Book):
     def __init__(self, page_count):
-        super().__init__(self.title, self.author)
         self.page_count = page_count  # in grams
 
 
