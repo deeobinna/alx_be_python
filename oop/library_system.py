@@ -6,7 +6,7 @@ class Book:
     def __str__(self):
         return f'"{self.title}" by {self.author}'
     
-class Ebook(Book):
+class EBook(Book):
     def __init__(self, file_size):
         super().__init__(self.title, self.author)
         self.file_size = file_size  # in MB
