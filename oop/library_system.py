@@ -36,6 +36,5 @@ class Library:
         if not self.books:
             print("No books in the library.")
         else: 
-            print("Books in the library:")
             for book in self.books:
                 print(book)
