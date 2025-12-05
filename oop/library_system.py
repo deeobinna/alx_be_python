@@ -4,7 +4,7 @@ class Book:
         self.author = author
 
     def __str__(self):
-        return f'"{self.title}" by {self.author}'
+        return f"Book: {self.title} by {self.author}"
     
 class EBook(Book):
     def __init__(self, file_size):
@@ -13,6 +13,7 @@ class EBook(Book):
 
 class PrintBook(Book):
     def __init__(self, page_count):
+        super().__init__(title = None, author = None)
         self.page_count = page_count  # in grams
 
 
@@ -21,8 +22,14 @@ class Library:
         self.books = []
     
     def add_book(self, book):
+        if not isinstance(book, Book):
+            raise TypeError("Only Book instances can be added to the library.")
         self.books.append(book)
 
     def list_books(self):
-        for book in self.books:
-            print(book)
+        if not self.books:
+            print("No books in the library.")
+        else: 
+            print("Books in the library:")
+            for book in self.books:
+                print(book)
